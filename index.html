@@ -19,7 +19,7 @@
     <!--Desktop/Mobile 적응형 레이아웃-->
     <script defer src="assets/js/m_main.js"></script>
 </head>
-<body>
+<body><!--onload="window.open('index.html','pop','width=375')"-->
     <div id="wrap">
         <div id="header_container">
             <header>
@@ -49,11 +49,8 @@
         </div>
         <div id="main_container">
             <div class="m_visual_wrap">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
+                <div class="swiper main_visual">
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
                         <div class="swiper-slide">
                             <div class="gallbox">
                                 <img src="assets/img/visual_main_01.jpg">
@@ -111,9 +108,9 @@
                 <section class="section_01"><!--섹션 영역-->
                     <div class="theme_recommd_wrap"><!--섹션 너비-->
                         <h2 class="tit">물놀이는 기본! 여름 휴가로 딱 좋은 캠핑장 🌊</h2>
-                        <div class="slide_wrapper">
-                            <div class="theme_items_wrap slides">
-                                <article class="item_box">
+                        <div class="swiper recommend">
+                            <div class="swiper-wrapper">
+                                <article class="item_box swiper-slide">
                                     <div class="img">
                                         <img src="assets/img/img_theme_recommd_01.jpg" alt="양양 서피비치">
                                     </div>
@@ -127,7 +124,7 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="item_box">
+                                <article class="item_box swiper-slide">
                                     <div class="img">
                                         <img src="assets/img/img_theme_recommd_01.jpg" alt="양양 서피비치">
                                     </div>
@@ -141,7 +138,7 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="item_box">
+                                <article class="item_box swiper-slide">
                                     <div class="img">
                                         <img src="assets/img/img_theme_recommd_01.jpg" alt="양양 서피비치">
                                     </div>
@@ -155,7 +152,7 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="item_box">
+                                <article class="item_box swiper-slide">
                                     <div class="img">
                                         <img src="assets/img/img_theme_recommd_01.jpg" alt="양양 서피비치">
                                     </div>
@@ -169,7 +166,7 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="item_box">
+                                <article class="item_box swiper-slide">
                                     <div class="img">
                                         <img src="assets/img/img_theme_recommd_01.jpg" alt="양양 서피비치">
                                     </div>
@@ -183,7 +180,7 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="item_box">
+                                <article class="item_box swiper-slide">
                                     <div class="img">
                                         <img src="assets/img/img_theme_recommd_01.jpg" alt="양양 서피비치">
                                     </div>
@@ -197,7 +194,7 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="item_box">
+                                <article class="item_box swiper-slide">
                                     <div class="img">
                                         <img src="assets/img/img_theme_recommd_01.jpg" alt="양양 서피비치">
                                     </div>
@@ -825,18 +822,18 @@
                     <div class="theme_activity_wrap">
                         <div class="activity_wrap_in">
                             <h2 class="tit">신나게 떠나볼까?<br>액티비티 체험 패키지 ⛵</h2>
-                            <div class="theme_tabs">
-                                <ul class="tabs">
-                                    <li class="selected"s><a href="#">수상 레저의 성지, 8월의 가평 </a></li>
-                                    <li><a href="#">짜릿한 패러글라이딩 1일 체험</a></li>
-                                    <li><a href="#">올 여름엔 서핑 도전! 양양 비치</a></li>
+                            <div class="swiper activity_tab theme_tabs">
+                                <ul class="swiper-wrapper tabs">
+                                    <li class="swiper-slide selected"s><a href="#">수상 레저의 성지, 8월의 가평 </a></li>
+                                    <li class="swiper-slide"><a href="#">짜릿한 패러글라이딩 1일 체험</a></li>
+                                    <li class="swiper-slide"><a href="#">올 여름엔 서핑 도전! 양양 비치</a></li>
                                 </ul>
                             </div>
                             <div class="theme_bg"></div>
                         </div>
-                        <div class="tabsBody">
-                            <div class="theme_items_wrap">
-                                <article class="card_item_box">
+                        <div class="swiper activity tabsBody">
+                            <div class="swiper-wrapper theme_items_wrap">
+                                <article class="swiper-slide card_item_box">
                                     <div class="img">
                                         <img src="assets/img/img_theme_activity_01.jpg" alt="포천 가족캠핑장">
                                     </div>
@@ -851,7 +848,7 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="card_item_box">
+                                <article class="swiper-slide card_item_box">
                                     <div class="img">
                                         <img src="assets/img/img_theme_activity_01.jpg" alt="포천 가족캠핑장">
                                     </div>
@@ -866,7 +863,7 @@
                                         </div>
                                     </div>
                                 </article>
-                                <article class="card_item_box">
+                                <article class="swiper-slide card_item_box">
                                     <div class="img">
                                         <img src="assets/img/img_theme_activity_01.jpg" alt="포천 가족캠핑장">
                                     </div>
@@ -882,99 +879,103 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="theme_items_wrap">
-                                <article class="card_item_box">
-                                    <div class="img">
-                                        <img src="assets/img/img_theme_activity_02.jpg" alt="포천 가족캠핑장">
-                                    </div>
-                                    <div class="item_txt_wrap">
-                                        <p class="item_sub_text">패키지</p>
-                                        <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
-                                        <p class="item_text">#20대추천 #캠프파이어</p>
-                                        <div class="price_group">
-                                            <strong class="price_now">180,000
-                                                <span>원~</span>
-                                            </strong>
+                            <div class="swiper activity theme_items_wrap">
+                                <div class="swiper-wrapper">
+                                    <article class="swiper-slide card_item_box">
+                                        <div class="img">
+                                            <img src="assets/img/img_theme_activity_02.jpg" alt="포천 가족캠핑장">
                                         </div>
-                                    </div>
-                                </article>
-                                <article class="card_item_box">
-                                    <div class="img">
-                                        <img src="assets/img/img_theme_activity_02.jpg" alt="포천 가족캠핑장">
-                                    </div>
-                                    <div class="item_txt_wrap">
-                                        <p class="item_sub_text">패키지</p>
-                                        <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
-                                        <p class="item_text">#20대추천 #캠프파이어</p>
-                                        <div class="price_group">
-                                            <strong class="price_now">180,000
-                                                <span>원~</span>
-                                            </strong>
+                                        <div class="item_txt_wrap">
+                                            <p class="item_sub_text">패키지</p>
+                                            <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
+                                            <p class="item_text">#20대추천 #캠프파이어</p>
+                                            <div class="price_group">
+                                                <strong class="price_now">180,000
+                                                    <span>원~</span>
+                                                </strong>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                                <article class="card_item_box">
-                                    <div class="img">
-                                        <img src="assets/img/img_theme_activity_02.jpg" alt="포천 가족캠핑장">
-                                    </div>
-                                    <div class="item_txt_wrap">
-                                        <p class="item_sub_text">패키지</p>
-                                        <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
-                                        <p class="item_text">#20대추천 #캠프파이어</p>
-                                        <div class="price_group">
-                                            <strong class="price_now">180,000
-                                                <span>원~</span>
-                                            </strong>
+                                    </article>
+                                    <article class="swiper-slide card_item_box">
+                                        <div class="img">
+                                            <img src="assets/img/img_theme_activity_02.jpg" alt="포천 가족캠핑장">
                                         </div>
-                                    </div>
-                                </article>
+                                        <div class="item_txt_wrap">
+                                            <p class="item_sub_text">패키지</p>
+                                            <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
+                                            <p class="item_text">#20대추천 #캠프파이어</p>
+                                            <div class="price_group">
+                                                <strong class="price_now">180,000
+                                                    <span>원~</span>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="swiper-slide card_item_box">
+                                        <div class="img">
+                                            <img src="assets/img/img_theme_activity_02.jpg" alt="포천 가족캠핑장">
+                                        </div>
+                                        <div class="item_txt_wrap">
+                                            <p class="item_sub_text">패키지</p>
+                                            <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
+                                            <p class="item_text">#20대추천 #캠프파이어</p>
+                                            <div class="price_group">
+                                                <strong class="price_now">180,000
+                                                    <span>원~</span>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
-                            <div class="theme_items_wrap">
-                                <article class="card_item_box">
-                                    <div class="img">
-                                        <img src="assets/img/img_theme_activity_03.jpg" alt="포천 가족캠핑장">
-                                    </div>
-                                    <div class="item_txt_wrap">
-                                        <p class="item_sub_text">패키지</p>
-                                        <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
-                                        <p class="item_text">#20대추천 #캠프파이어</p>
-                                        <div class="price_group">
-                                            <strong class="price_now">180,000
-                                                <span>원~</span>
-                                            </strong>
+                            <div class="swiper activity theme_items_wrap">
+                                <div class="swiper-wrapper">
+                                    <article class="swiper-slide card_item_box">
+                                        <div class="img">
+                                            <img src="assets/img/img_theme_activity_03.jpg" alt="포천 가족캠핑장">
                                         </div>
-                                    </div>
-                                </article>
-                                <article class="card_item_box">
-                                    <div class="img">
-                                        <img src="assets/img/img_theme_activity_03.jpg" alt="포천 가족캠핑장">
-                                    </div>
-                                    <div class="item_txt_wrap">
-                                        <p class="item_sub_text">패키지</p>
-                                        <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
-                                        <p class="item_text">#20대추천 #캠프파이어</p>
-                                        <div class="price_group">
-                                            <strong class="price_now">180,000
-                                                <span>원~</span>
-                                            </strong>
+                                        <div class="swiper-slide item_txt_wrap">
+                                            <p class="item_sub_text">패키지</p>
+                                            <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
+                                            <p class="item_text">#20대추천 #캠프파이어</p>
+                                            <div class="price_group">
+                                                <strong class="price_now">180,000
+                                                    <span>원~</span>
+                                                </strong>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                                <article class="card_item_box">
-                                    <div class="img">
-                                        <img src="assets/img/img_theme_activity_03.jpg" alt="포천 가족캠핑장">
-                                    </div>
-                                    <div class="item_txt_wrap">
-                                        <p class="item_sub_text">패키지</p>
-                                        <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
-                                        <p class="item_text">#20대추천 #캠프파이어</p>
-                                        <div class="price_group">
-                                            <strong class="price_now">180,000
-                                                <span>원~</span>
-                                            </strong>
+                                    </article>
+                                    <article class="swiper-slide card_item_box">
+                                        <div class="img">
+                                            <img src="assets/img/img_theme_activity_03.jpg" alt="포천 가족캠핑장">
                                         </div>
-                                    </div>
-                                </article>
+                                        <div class="item_txt_wrap">
+                                            <p class="item_sub_text">패키지</p>
+                                            <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
+                                            <p class="item_text">#20대추천 #캠프파이어</p>
+                                            <div class="price_group">
+                                                <strong class="price_now">180,000
+                                                    <span>원~</span>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="swiper-slide card_item_box">
+                                        <div class="img">
+                                            <img src="assets/img/img_theme_activity_03.jpg" alt="포천 가족캠핑장">
+                                        </div>
+                                        <div class="item_txt_wrap">
+                                            <p class="item_sub_text">패키지</p>
+                                            <strong class="item_title item_title_mid">[초특가] 수상레저 올인원 패키지</strong>
+                                            <p class="item_text">#20대추천 #캠프파이어</p>
+                                            <div class="price_group">
+                                                <strong class="price_now">180,000
+                                                    <span>원~</span>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </article>    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -983,49 +984,51 @@
                     <div class="info_wrap">
                         <div class="info_event_wrap">
                             <h2 class="tit">이벤트 / 혜택 모아보기</h2>
-                            <div class="event_banner_wrap">
-                                <div class="event_banner">
-                                    <div class="banner_inner">
-                                        <p class="event_txt">
-                                            <p class="event_sub">신규 가입</p>
-                                            <p class="event_tit">
-                                                스타벅스<br>
-                                                기프티콘<br>
-                                                100% 증정
+                            <div class="swiper event">
+                                <div class="swiper-wrapper event_banner_wrap">
+                                    <div class="swiper-slide event_banner">
+                                        <div class="banner_inner">
+                                            <p class="event_txt">
+                                                <p class="event_sub">신규 가입</p>
+                                                <p class="event_tit">
+                                                    스타벅스<br>
+                                                    기프티콘<br>
+                                                    100% 증정
+                                                </p>
                                             </p>
-                                        </p>
-                                        <p class="event_icon">
-                                            <span><img src="assets/img/mobile/icon_coffee.svg"></span>
-                                        </p>
+                                            <p class="event_icon">
+                                                <span><img src="assets/img/mobile/icon_coffee.svg"></span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="event_banner">
-                                    <div class="banner_inner">
-                                        <p class="event_txt">
-                                            <p class="event_sub">카드할인</p>
-                                            <p class="event_tit">
-                                                신한카드<br>
-                                                10%<br>
-                                                추가적립
+                                    <div class="swiper-slide event_banner">
+                                        <div class="banner_inner">
+                                            <p class="event_txt">
+                                                <p class="event_sub">카드할인</p>
+                                                <p class="event_tit">
+                                                    신한카드<br>
+                                                    10%<br>
+                                                    추가적립
+                                                </p>
                                             </p>
-                                        </p>
-                                        <p class="event_icon">
-                                            <span><img src="assets/img/mobile/icon_card.svg"></span>
-                                        </p>
+                                            <p class="event_icon">
+                                                <span><img src="assets/img/mobile/icon_card.svg"></span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="event_banner">
-                                    <div class="banner_inner">
-                                        <p class="event_txt">
-                                            <p class="event_sub">간편결제</p>
-                                            <p class="event_tit">
-                                                카카오페이<br>
-                                                즉시 할인!
+                                    <div class="swiper-slide event_banner">
+                                        <div class="banner_inner">
+                                            <p class="event_txt">
+                                                <p class="event_sub">간편결제</p>
+                                                <p class="event_tit">
+                                                    카카오페이<br>
+                                                    즉시 할인!
+                                                </p>
                                             </p>
-                                        </p>
-                                        <p class="event_icon">
-                                            <span><img src="assets/img/mobile/icon_discount_tag.svg"></span>
-                                        </p>
+                                            <p class="event_icon">
+                                                <span><img src="assets/img/mobile/icon_discount_tag.svg"></span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
