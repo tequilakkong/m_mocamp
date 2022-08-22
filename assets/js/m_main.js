@@ -79,6 +79,56 @@ const swiper5 = new Swiper(".event", {
 });
 
 
+//메뉴 슬라이드
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".btn_menu_all").addEventListener("click", function(e){
+      if (document.querySelector(".menu_wrap").classList.contains("on")) {
+        //메뉴 slide
+        document.querySelector(".menu_wrap").classList.remove("on");
+        document.getElementById("btnAll").src = "assets/img/icon/icon_hamburger_menu_thin.svg"; 
+        document.querySelector(".btn_menu_all_icon").classList.remove("btnRotate");
+      } else {
+        //메뉴 slideIn
+        document.querySelector(".menu_wrap").classList.add("on");
+        document.getElementById("btnAll").src = "assets/img/icon/icon_close_thin.svg"; //문자 그대로를 바꿔주므로 경로는 동일하게 입력
+        document.querySelector(".btn_menu_all_icon").classList.add("btnRotate");
+      }
+    });
+});
+//출처: https://pannchat.tistory.com/entry/javascript-left-slide-menubar-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A1%9C-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EB%A9%94%EB%89%B4%EB%B0%94-%EB%A7%8C%EB%93%A4%EA%B8%B0
+
+
+//아코디언 메뉴
+// var tgMenu = document.getElementsByClassName("toggle_menu"); //아코디언클래스리스트를 가져온다.
+// var i;
+
+// for (i = 0; i < tgMenu.length; i++) {
+//   tgMenu.addEventListener('click', function() {
+//     document.querySelector('.collapsible').classList.toggle('open');
+//   });
+  
+// };
+//출처: https://juein.tistory.com/42
+
+
+//출처: https://s00741.tistory.com/entry/자바스크립트-아코디언-accordion-javascript [꿈꾸는 자:티스토리]
+
+//뭔가 단순 한가지 기능이 여러개에 적용되어 있을때는 대부분 for문을 사용해야하는 경우가 많다...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // 아래는 사용 보류!!
@@ -119,3 +169,5 @@ const swiper5 = new Swiper(".event", {
 //     prev();
 //   }
 // }
+
+
