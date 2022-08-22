@@ -9,17 +9,15 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/m_style.css">
-    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/c152054233.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script><!--Swiper-->
-    <!--Desktop/Mobile 적응형 레이아웃-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="assets/js/m_main.js"></script>
 </head>
-<body><!--onload="window.open('index.html','pop','width=375')"-->
+<body>
     <div id="wrap">
         <div id="header_container">
             <header>
@@ -40,7 +38,7 @@
                     </div>
                     <div class="m_gnb_menu">
                         <a href="#" class="btn_menu_all">
-                            <span class="btn_menu_all_icon"><img src="assets/img/icon/icon_hamburger_menu_thin.svg" class="icon_img"></span>
+                            <span class="btn_menu_all_icon"><img src="assets/img/icon/icon_hamburger_menu_thin.svg" class="icon_img" id="btnAll"></span>
                             <span class="hide_txt">전체메뉴</span>
                         </a>
                     </div>
@@ -1074,6 +1072,141 @@
                         <p class="banner_txt">나만을 위한 맞춤 캠핑장 찾기 <i class="fa-solid fa-arrow-right-long"></i></p>
                     </a>
                 </div>
+            </div>
+        </div>
+        <div class="menu_wrap">
+            <div class="menu_wrap_inner">
+                <div class="topArea">
+                    <a href="#none">
+                        <span>로그인 해주세요</span>
+                    </a>
+                </div>
+                <div class="myMenu">
+                    <ul>
+                        <li>
+                            <a href="#none" class="myBtn">
+                                <span>마이메뉴</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="reservBtn">
+                                <span>예약내역</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="likeBtn">
+                                <span>나의 찜</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="scrapBtn">
+                                <span>스크랩</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gnbArea">
+                    <ul>
+                        <li>
+                            <a href="#none" class="toggle_menu">
+                                캠핑
+                                <span class="toggleBtn"></span>
+                            </a>
+                            <div class="collapsible">
+                                <ul>
+                                    <li><a href="#none">a</a></li>
+                                    <li><a href="#none">b</a></li>
+                                    <li><a href="#none">c</a></li>
+                                    <li><a href="#none">d</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none" class="toggle_menu">
+                                체험
+                                <span class="toggleBtn"></span>
+                            </a>
+                            <div class="collapsible">
+                                <ul>
+                                    <li><a href="#none">a</a></li>
+                                    <li><a href="#none">b</a></li>
+                                    <li><a href="#none">c</a></li>
+                                    <li><a href="#none">d</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none" class="toggle_menu">
+                                렌트카
+                                <span class="toggleBtn"></span>
+                            </a>
+                            <div class="collapsible">
+                                <ul>
+                                    <li><a href="#none">a</a></li>
+                                    <li><a href="#none">b</a></li>
+                                    <li><a href="#none">c</a></li>
+                                    <li><a href="#none">d</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none" class="toggle_menu">
+                                매거진
+                                <span class="toggleBtn"></span>
+                            </a>
+                            <div class="collapsible">
+                                <ul>
+                                    <li><a href="#none">a</a></li>
+                                    <li><a href="#none">b</a></li>
+                                    <li><a href="#none">c</a></li>
+                                    <li><a href="#none">d</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none" class="toggle_menu">
+                                커뮤니티
+                                <span class="toggleBtn"></span>
+                            </a>
+                            <div class="collapsible">
+                                <ul>
+                                    <li><a href="#none">a</a></li>
+                                    <li><a href="#none">b</a></li>
+                                    <li><a href="#none">c</a></li>
+                                    <li><a href="#none">d</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none" class="toggle_menu">
+                                고객센터
+                                <span class="toggleBtn"></span>
+                            </a>
+                            <div class="collapsible">
+                                <ul>
+                                    <li><a href="#none">a</a></li>
+                                    <li><a href="#none">b</a></li>
+                                    <li><a href="#none">c</a></li>
+                                    <li><a href="#none">d</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="otehrMenu">
+                    <li><a href="#none" class="reviewBtn">
+                        <span>후기쓰기</span>
+                    </a></li>
+                    <li><a href="#none" class="liveBtn">
+                        <span>LIVE</span>
+                    </a></li>
+                    <li><a href="#none" class="infoBtn">
+                        <span>캠핑정보</span>
+                    </a></li>
+                    <li><a href="#none" class="noticeBtn">
+                        <span>공지사항</span>
+                    </a></li>
+                </ul>    
             </div>
         </div>
     </div>
