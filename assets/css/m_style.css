@@ -9,6 +9,9 @@ body {
     max-width: 375px;
     margin: 0 auto;
 }
+#wrap {
+    position: relative;
+}
 .icon_img {
     width: 100%;
     height: 100%;
@@ -63,7 +66,9 @@ header {
     margin-top: 2px;
 }
 .m_gnb_menu {
+    position:relative;
     margin-left: 24px;
+    z-index: 401;
 }
 .btn_menu_all_icon {
     display: inline-block;
@@ -698,4 +703,155 @@ footer > div:last-child {
     color: #666;
     font-weight: 300;
     margin-top: 8px;
+}
+
+
+/* 메뉴 슬라이드 */
+.menu_wrap.on {
+    right: 0;
+    opacity: 1;
+  }
+  .menu_wrap {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 400;
+    width: 100%;
+    height: 100%;
+    /* padding: 50px 20px; */
+    box-sizing: border-box;
+    transition: right 0.3s ease-in-out;
+    background-color: #fff;
+    /* opacity: 0; */
+  }
+  .btn_menu_all {
+    transition: all 0.3s ease-in-out;
+  }
+  .btnRotate {
+    transform: rotate(-90deg);
+    transition: all 0.3s ease-in-out;
+  }
+
+.menu_wrap_inner {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.topArea {
+    height: 55px;
+    border-bottom: 1px solid #eee;
+}
+.topArea a {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    top: 50%; left: 16px;
+    transform: translateY(-50%);
+}
+.topArea a::after {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 50%; right: -24px;
+    width: 10px; height: 10px;
+    background: url('../img/icon/icon_arrow_left_thin.svg') no-repeat center center / contain;
+    transform: translateY(-50%) rotate(180deg);
+
+}
+.myMenu {
+    padding: 16px 0;
+    border-bottom: 1px solid #ccc;
+}
+.myMenu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.myMenu ul li a span {
+    display: inline-block;
+    position: relative;
+    margin-top: 36px;
+}
+.myMenu ul li a span::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: -38px; left: 50%;
+    width: 36px; height: 36px;
+    transform: translateX(-50%);
+}
+.myMenu ul li .myBtn span::before {
+    background: url('../img/icon/icon_user_circle_thin.svg') no-repeat center center /contain;
+}
+.myMenu ul li .reservBtn span::before {
+    background: url('../img/icon/icon_info_scroll_thin.svg') no-repeat center center /contain;
+}
+.myMenu ul li .likeBtn span::before {
+    background: url('../img/icon/icon_heart_thin.svg') no-repeat center center /contain;
+}
+.myMenu ul li .scrapBtn span::before {
+    background: url('../img/icon/book_scrap_icon.svg') no-repeat center center /contain;
+}
+
+.gnbArea ul li a {
+    position: relative;
+    display: block;
+    padding: 16px 22px;
+    border-bottom: 1px solid #eee;
+    font-size: 20px;
+    font-weight: bold;
+}
+.gnbArea ul li a span {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 50%; right: 16px;
+    width: 18px; height: 18px;
+    background: url('../img/icon/icon_arrow_left_thin.svg') no-repeat center center / contain;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.collapsible {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+  
+.collapsible ul li a {
+    font-weight: 500;
+}
+.collapsible ul li a::after {
+    display: none;
+}
+
+
+.otehrMenu {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 36px;
+}
+.otehrMenu li a span {
+    display: inline-block;
+    position: relative;
+    margin-top: 36px;
+}
+.otehrMenu li a span::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: -44px; left: 50%;
+    width: 36px; height: 36px;
+    transform: translateX(-50%);
+}
+.otehrMenu li .reviewBtn span::before {
+    background: url('../img/icon/pencil_thin_icon.svg') no-repeat center center /contain;
+}
+.otehrMenu li .liveBtn span::before {
+    background: url('../img/icon/microphone_thin_icon.svg') no-repeat center center /contain;
+}
+.otehrMenu li .infoBtn span::before {
+    background: url('../img/icon/note_thin_icon.svg') no-repeat center center /contain;
+}
+.otehrMenu li .noticeBtn span::before {
+    background: url('../img/icon/megaphone_icon.svg') no-repeat center center /contain;
 }
