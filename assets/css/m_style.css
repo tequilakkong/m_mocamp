@@ -30,6 +30,7 @@ body {
 .item_title_mid {
     font-size: 16px;
 }
+.swiper, .swiper-wrapper, .swiper-slide { width: inherit; height: inherit; }
 
 /* =========== header =========== */
 header { 
@@ -74,7 +75,7 @@ header {
     padding-top: 8px;
 }
 /* swiper */
-.swiper {
+.main_visual {
     width: 100%;
     height: 364px;
 }
@@ -152,45 +153,27 @@ header {
 /* =========== main =========== */
 /* section_01 */
 .section_01 {
-    padding-top: 44px;
+    padding: 44px 0 22px;
 }
 .theme_recommd_wrap {
     position: relative;
 }
-.slide_wrapper {
-    position: relative;;
+.theme_recommd_wrap .swiper-slide {
+    width: 230px;
+    height: 100%;
+}
+.section_01 .img {
     width: 100%;
-    height: 410px;
-    margin: 0 auto;
-    overflow: hidden;
+    height: 230px;
 }
-.slides {
-    display: flex;
-    flex-wrap: nowrap; /*요소들이 강제로 한줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정*/
-    justify-content: space-between;
-    position: absolute;
-    left: 0; top: 0;
-    transition: left 0.5s ease-out;
-}
-.slide_wrapper > .theme_items_wrap > .item_box:not(:last-child) {
-    margin-right: 24px;
-}
-
-.theme_items_wrap > article.item_box {
-    width: 280px;
-    margin: 0 auto;
-}
-.theme_items_wrap > article .img {
-    width: 280px;
-    height: 280px;
-}
-.theme_items_wrap > article .img img {
+.section_01 .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
 }
 .item_txt_wrap {
+    width: 100%; 
     padding: 10px 0;
 }
     .item_text {
@@ -219,7 +202,6 @@ header {
 .theme_popular_wrap {
     position: relative;
 }
-.theme_tabs {}
 .tabs {
     display: flex;
     margin-bottom: 14px;
@@ -247,15 +229,16 @@ header {
 }
 .theme_popular_wrap .tabsBody .theme_items_wrap {
     display: none;
+    flex-wrap: wrap; /*요소들이 강제로 한줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정*/
+    justify-content: space-between;
 }
 
 .theme_popular_wrap .tabsBody .theme_items_wrap:first-child {
     display: flex;
-    flex-wrap: wrap; /*요소들이 강제로 한줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정*/
-    justify-content: space-between;
 }
+
 .section_02 .theme_items_wrap > article.item_box {
-    width: 100px;
+    width: 33.3%;
     margin-bottom: 8px;
 }
 .section_02 .theme_items_wrap > article .img {
@@ -297,6 +280,10 @@ header {
     border-radius: 8px;
     font-size: 10px;
 }
+.replace_btn:hover {
+    background: #c8c7c7;
+}
+
 .btn_more_info {
     position: absolute;
     top: 0; right: 0;
@@ -373,14 +360,20 @@ header {
     font-weight: 700;
     padding-left: 4px;
 }
+.activity_tab {
+    width: auto;
+    height: auto;
+}
+
 .activity_wrap_in .tabs {
-    overflow: hidden;
+    width: auto;
 }
 .activity_wrap_in .tabs li {
     margin-bottom: 24px;
     background: rgba(255,255,255,0.6);
     color: #111;
     border: 0;
+    width: auto;
 }
 .activity_wrap_in .tabs li.selected {
     background: #111;
@@ -428,12 +421,12 @@ header {
     .theme_items_wrap .card_item_box .img {
         width: 100%;
         height: 180px;
-        border-radius: 8px;
     }
     .theme_items_wrap .card_item_box .img img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 8px;
     }
 
 .theme_activity_wrap .item_sub_text {
@@ -468,13 +461,16 @@ header {
 .section_05 {
     padding-top: 44px;
 }
-.event_banner_wrap {
+.event_banner_wrap  {
     position: relative;
     display: flex;
     width: 100%;
+    padding-left: 3px;
+    padding-bottom: 20px;
 }
 .event_banner {
-    height: 180px;
+    width: 150px;
+    height: 100%;
     border-radius: 16px;
     box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25); /*x y blur spread color*/
     margin-right: 10px;
